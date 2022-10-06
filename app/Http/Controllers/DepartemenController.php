@@ -75,7 +75,7 @@ public function store(Request $request)
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function destroy($id)
     {
         Departemen::find($id)->delete();   

@@ -39,7 +39,7 @@
                                     <label class="font-weightbold">Nama Departemen</label>
                                     <input type="text"
                                         class="form-control @error('nama_departemen') is-invalid @enderror"
-                                        name="nama_departemen" value="{{ old('nama_departemen') }}"
+                                        name="nama_departemen" value="{{$departemen->nama_departemen }}"
                                         placeholder="Masukkan Nama Departemen">
                                     @error('nama_departemen')
                                     <div class="invalid-feedback">
@@ -52,7 +52,7 @@
                                 <div class="form-group col-md-6">
                                     <label class="font-weightbold">Nama Manager</label>
                                     <input type="text" class="form-control @error('nama_manager') is-invalid @enderror"
-                                        name="nama_manager" value="{{ old('nama_manager') }}"
+                                        name="nama_manager" value="{{ $departemen->nama_manager}}"
                                         placeholder="Masukkan Nama Manager">
                                     @error('nama_manager')
                                     <div class="invalid-feedback">
@@ -64,7 +64,7 @@
                                     <label class="font-weightbold">Jumlah Pegawai</label>
                                     <input type="number"
                                         class="form-control @error('jumlah_pegawai') is-invalid @enderror"
-                                        name="jumlah_pegawai" value="{{ old('jumlah_pegawai') }}"
+                                        name="jumlah_pegawai" value="{{ $departemen->jumlah_pegawai }}"
                                         placeholder="Masukkan Jumlah Pegawai">
                                     @error('jumlah_pegawai')
                                     <div class="invalid-feedback">

@@ -54,8 +54,7 @@ $item->nama_manager }}</td>
                                         <td class="text-center">{{
 $item->jumlah_pegawai }}</td>
                                         <td class="text-center">
-                                            <form onsubmit="return
-confirm('Apakah Anda Yakin ?');" action="{{ route('departemen.destroy',
+                                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('departemen.destroy',
 $item->id) }}" method="POST">
                                                 <a href="{{
 route('departemen.edit', $item->id) }}" class="btn btn-sm btn-primary">EDIT</a>
