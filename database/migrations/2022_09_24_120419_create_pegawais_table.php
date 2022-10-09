@@ -14,13 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pegawais', function (Blueprint $table) {
+            $table->id();
             $table->string('nomor_induk_pegawai');
             $table->string('nama_pegawai');
-            $table->foreignId('departemen_id')-> constrained('departemens','id');
+            $table->foreignId('departemen_id');
             $table->string('email');
-            $table->integer('telepon');
+            $table->string('telepon');
             $table->boolean('gender');
-            $table->boolean('status');            
+            $table->boolean('status'); 
+            $table->timestamps();           
         });
     }
 

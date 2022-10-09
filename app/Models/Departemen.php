@@ -15,9 +15,15 @@ class Departemen extends Model
      * @var array
      */
 
-     protected $fillable = [
+    protected $table = 'departemens';
+    protected $primarykey = 'id';
+    protected $fillable = [
         'nama_departemen',
         'nama_manager',
         'jumlah_pegawai',
-     ];
+    ];
+
+    public function pegawais(){
+        return $this->hasMany(Pegawai::class, 'departemen_id', 'id');
+    }
 }

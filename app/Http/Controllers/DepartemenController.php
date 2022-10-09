@@ -1,9 +1,12 @@
 <?php
 namespace App\Http\Controllers;
-use Mail;
+
 use App\Mail\DepartemenMail; /* import model mail */
 use App\Models\Departemen; /* import model departemen */
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Exception;
+
 class DepartemenController extends Controller
 {
     /**
@@ -59,7 +62,7 @@ public function store(Request $request)
         'body' => $request->nama_departemen,
         ];
         //Mengirim email ke emailtujuan@gmail.com
-        Mail::to('emailtujuan@gmail.com')->send(new
+        Mail::to('aldyoputra21@gmail.com')->send(new
         DepartemenMail($content));
         //Redirect jika berhasil mengirim email
         return redirect()->route('departemen.index')->with(['success'

@@ -14,14 +14,17 @@ class Pegawai extends Model
      * 
      * @var array
      */
-
      protected $fillable = [
         'nomor_induk_pegawai',
         'nama_pegawai',
-        'id_departemen',
+        'departemen_id',
         'email',
         'telepon',
         'gender',
         'status',
      ];
+     
+     public function departemens(){
+      return $this->belongsTo(Departemen::class, 'departemen_id');
+   }
 }
